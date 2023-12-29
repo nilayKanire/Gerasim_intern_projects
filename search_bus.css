@@ -1,0 +1,98 @@
+
+.navbar-header{
+    display: flex;
+    margin-top:10px;
+    
+    justify-content:start;
+    padding-left: 1rem;
+    
+    }
+    .navbar{
+        background-color: #b1aab9;
+    }
+
+    nav>form{
+    display: flex;
+    margin-top:10px;
+    justify-content:end;
+    
+    
+    }
+    #email,#password{
+        
+        margin-right: 1rem;
+    }
+
+    nav>form>button{
+        margin-right: 2rem;
+    }
+
+.container1_2, .container3_4,.container5_6{
+    display: flex;
+    flex-direction: column;
+}
+
+
+    .redbus-card {
+        border: 1px solid #e8e8e8;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width:100%;
+    }
+
+    .redbus-card-header {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        background-color: rgb(90, 87, 83);
+        color: #fff;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .redbus-card-body {
+        display:flex;
+        justify-content: space-between;
+        padding: 20px;
+    }
+    
+    /*  review */
+    
+    .rat-green{
+        background-color: #38b87c;
+        
+    }
+    .rating{
+        padding: 4px 3px;
+        color: #fff;
+        border-radius: 3px;
+        margin-right: 5px;
+        width: 40px;
+        text-align: center;
+        height: 24px;
+        font-size: 12px;
+    }
+    .lh-18 {
+        line-height: 18px;
+    }
+
+
+    .redbus-card-title {
+        color: #000000;
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .redbus-card-text {
+        color: #333;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .redbus-card-footer {
+        background-color: #f9f9f9;
+        padding: 15px;
+        text-align: center;
+    }

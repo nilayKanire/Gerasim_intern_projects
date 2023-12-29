@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Book your bus</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link href="index_bus.css" rel="stylesheet"/>
+</head>
+
+<body>
+    
+    <!--  Navigation Bar -->
+    <nav class="navbar navbar-default justify-content-between">
+      
+        <div class="navbar-header">
+          <img src="bus_img/bus.png" alt="bus logo" width="25rem" height="25rem"  >
+          <a class="navbar-brand" style="color:black; font-size:20px; padding-top: 0.7rem; padding-left: 0rem;" href="#" ><b>Bus</b></a>
+        </div>
+
+        
+        <ul class="nav navbar-nav mr-auto">
+          <li class="nav-item ">
+            <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+          </li>
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="#">Bus</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="#">Download APP</a> 
+          </li>
+        </ul>
+      
+      <form class="form-inline my-2 my-lg-0" >
+        <input class="form-control mr-sm-2" type="email" id="email" placeholder="email" aria-label="email" > 
+        <input class="form-control mr-sm-2" type="password" id="password" placeholder="password" aria-label="password" >
+        <button class="btn btn-success "style="height:3.8rem;" type="submit">login</button>
+      </form>
+      
+    </nav>
+
+
+    <h1 style="text-align: center;"><b>Book  Ticket</b></h1>
+    <img src="bus_img/banner2.jpg" alt="busimg" width="100%" height="400rem">
+    
+    <div class="container-body text-center">
+        <h2>Bus Booking</h2>
+    <div class="container ">
+        
+        <form action="#" method="post"  >
+            <div class="from-to">
+            <div class="form-group ">
+                <label for="from">From</label>
+                <input type="text" id="from" name="from" placeholder="Enter departure city" required style="width: 17rem; ">
+            </div>
+            <div class="form-group">
+                <label for="to">To</label>
+                <input type="text" id="to" name="to" placeholder="Enter destination city" required style="width: 17rem;">
+            </div>
+            </div>
+            <div class="date-passenger">
+            <div class="form-group">
+                <label for="date">Date of Journey</label>
+                <input type="date" id="date" name="date" required  style="width: 17rem;">
+            </div>
+            <div class="form-group">
+                <label for="passengers">Number of Passengers</label>
+                <input type="number" id="passengers" name="passengers" min="1" required style="width: 17rem;">
+            </div>
+            </div>
+            <button type="submit" style="height: 6rem;">Search Buses</button>
+        </form>
+        
+    </div>
+    </div>
+
+    
+
+
+    
+
+    
+  </body>
+</html>

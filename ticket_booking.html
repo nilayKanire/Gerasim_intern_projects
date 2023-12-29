@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ticket Booking</title>
+    <!--Google Fonts and Icons-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round|Material+Icons+Sharp|Material+Icons+Two+Tone"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="ticket_booking.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+  </head>
+  <nav class="navbar navbar-default justify-content-between">
+      
+    <div class="navbar-header">
+      <img src="bus_img/bus.png" alt="bus logo" width="25rem" height="25rem"  >
+      <a class="navbar-brand" style="color:black; font-size:20px; padding-top: 0.7rem; padding-left: 0rem;" href="#" ><b>Bus</b></a>
+    </div>
+
+    
+    <ul class="nav navbar-nav mr-auto">
+      <li class="nav-item ">
+        <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+      </li>
+      
+      
+      <li class="nav-item">
+        <a class="nav-link" href="#">Bus</a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link" href="#">Download APP</a> 
+      </li>
+    </ul>
+  
+  <form class="form-inline my-2 my-lg-0" >
+    <input class="form-control mr-sm-2" type="email" id="email" placeholder="email" aria-label="email" > 
+    <input class="form-control mr-sm-2" type="password" id="password" placeholder="password" aria-label="password" >
+    <button class="btn btn-success "style="height:3.8rem;" type="submit">login</button>
+  </form>
+  
+</nav>
+  <body>
+    <div class="center">
+      <div class="tickets">
+        <div class="ticket-selector">
+          <div class="head">
+            <div class="title">Bus Seats</div>
+          </div>
+          <div class="seats">
+            <div class="status">
+              <div class="item">Available</div>
+              <div class="item">Booked</div>
+              <div class="item">Selected</div>
+            </div>
+            <div id="seat_arrange">
+            <div class="all-seats">
+              <input type="checkbox" name="tickets" id="s1" />
+              <label for="s1" class="seat booked"></label>
+            </div>
+            <div class="all-seats_2">
+              <input type="checkbox" name="tickets_2" id="s2" />
+              <label for="s2" class="seat booked"></label>
+            </div>
+            
+
+            </div>
+          
+            
+          </div>
+        </div>
+        <div class="price">
+          <div class="total">
+            <span> <span class="count">0</span> Tickets </span>
+            <div class="amount">0</div>
+          </div>
+          <button type="button">Book</button>
+        </div>
+      </div>
+    </div>
+    
+    <script>
+      let seats = document.querySelector(".all-seats");
+      for (var i = 0; i < 29; i++) {
+        let randint = Math.floor(Math.random() * 2);
+        let booked = randint === 1 ? "booked" : "";
+        seats.insertAdjacentHTML(
+          "beforeend",
+          '<input type="checkbox" name="tickets" id="s' +
+            (i + 2) +
+            '" /><label for="s' +
+            (i + 2) +
+            '" class="seat ' +
+            booked +
+            '"></label>'
+        );
+      }
+
+      let tickets1 = seats.querySelectorAll("input");
+tickets1.forEach((ticket1) => {
+  ticket1.addEventListener("change", () => {
+    let amount = document.querySelector(".amount").innerHTML;
+    let count = document.querySelector(".count").innerHTML;
+    amount = Number(amount);
+    count = Number(count);
+
+    if (ticket1.checked) {  
+      count += 1;
+      amount += 200;
+    } else {
+      count -= 1;
+      amount -= 200;
+    }
+    document.querySelector(".amount").innerHTML = amount;
+    document.querySelector(".count").innerHTML = count;
+  });
+});
+
+
+      let seat_2 = document.querySelector(".all-seats_2");
+      for (var i = 0; i < 19; i++) {
+        let randint2 = Math.floor(Math.random() * 2);
+        let booked2 = randint2 === 1 ? "booked" : "";
+        seat_2.insertAdjacentHTML(
+          "beforeend",
+          '<input type="checkbox" name="tickets" id="s2' +
+            (i + 2) +
+            '" /><label for="s' +
+            (i + 2) +
+            '" class="seat ' +
+            booked2 +
+            '"></label>'
+        );
+      }
+
+      let tickets_2 = seat_2.querySelectorAll("input");
+  tickets_2.forEach((ticket) => {
+  ticket.addEventListener("change", () => {
+    let amount = document.querySelector(".amount").innerHTML;
+    let count = document.querySelector(".count").innerHTML;
+    amount = Number(amount);
+    count = Number(count);
+
+    if (ticket.checked) {
+      count += 1;
+      amount += 200;
+    } else {
+      count -= 1;
+      amount -= 200;
+    }
+    document.querySelector(".amount").innerHTML = amount;
+    document.querySelector(".count").innerHTML = count;
+  });
+});
+    </script>
+  </body>
+</html>
